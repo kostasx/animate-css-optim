@@ -74,13 +74,21 @@ function requestURL( url, done ){
 
 	        var $ = cheerio.load( html,{ normalizeWhitespace: false, xmlMode: false, decodeEntities: true });
 
-	        $('.animated').each( function ( index, element ) {
+	        $('.animated, .wow').each( function ( index, element ) {
 
 	        	var classes = $(element).attr("class").split(/\s+/);
-	        		classes.splice( classes.indexOf("animated"), 1 );	// REMOVE .animated CLASS WHICH WE DON'T NEED
+
+	        		if ( ~classes.indexOf("animated") ){
+		        		classes.splice( classes.indexOf("animated"), 1 );	// REMOVE .animated CLASS WHICH WE DON'T NEED
+	        		} 
+
+	        		if ( ~classes.indexOf("wow") ){
+		        		classes.splice( classes.indexOf("wow"), 1 );	// REMOVE .animated CLASS WHICH WE DON'T NEED
+	        		} 
 
 	        	// FILTER USED animate.css CLASSES
 	        	classes.forEach(function(_class){
+	        		//console.log(chalk.red(_class));
 	        		( ~animStyles.indexOf(_class) && !~animStylesActive.indexOf(_class) ) && animStylesActive.push( _class );
 	        	});
 

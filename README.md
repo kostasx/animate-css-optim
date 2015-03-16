@@ -37,6 +37,13 @@ You will now have an `output` folder created containing the optimized versions o
 ## License
 Animate.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
+## CHANGELOG
+
+0.1.1 	Adding support for [wow](http://mynameismatthieu.com/WOW/) plugin which dynamically adds the .animated class on the elements.
+
+0.1.0 	Initial commit and first tests.
+
+
 ## TO DO
 
 + Add support for reading local files using `fs`.
