@@ -1,3 +1,5 @@
+[![npm downloads per month](http://img.shields.io/npm/dm/animate-css-optim.svg)](https://www.npmjs.org/package/animate-css-optim)
+
 ## DESCRIPTION
 
 Optimize [animate.css](http://daneden.github.io/animate.css/) stylesheets. Reduce filesize.
